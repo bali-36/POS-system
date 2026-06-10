@@ -4,6 +4,9 @@ A production-ready, full-stack Point of Sale (POS) and inventory management appl
 
 Developed as a course project for the **Database Systems Course**.
 
+[![Repository](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/bali-36/POS-system)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 ---
 
 ## 📌 Project Overview & Purpose
@@ -21,7 +24,7 @@ This project solves these challenges by implementing a desktop/tablet-friendly P
 ## 🛠️ Technology Stack & Directory Structure
 
 ```
-POS system/
+POS-system/
 ├── app/                       # React Frontend (SPA)
 │   ├── src/
 │   │   ├── components/        # Layout & Shared UI Components
@@ -37,7 +40,7 @@ POS system/
     └── backend/               # Flask REST API
         ├── database.py        # Database creation, seeding, & SQL logic
         ├── app.py             # Flask controllers & routing
-        ├── pos_database.db    # SQLite binary database file
+        ├── requirements.txt   # Python backend dependencies
         └── static/            # Pre-compiled React frontend static assets
 ```
 
@@ -53,19 +56,27 @@ POS system/
 *   Python 3.8 or higher installed.
 *   Node.js 18+ installed (if you want to modify or compile the frontend).
 
-### 1. Backend Setup & Run
-Open a terminal in the project directory:
+### 1. Clone & Set Up the Repository
+
+```bash
+# Clone the repository
+git clone https://github.com/bali-36/POS-system.git
+cd POS-system
+```
+
+### 2. Backend Setup & Run
 
 ```bash
 # Navigate to the backend directory
 cd pos-system/backend
 
-# (Optional) Create a Python virtual environment
+# Create a Python virtual environment
 python -m venv .venv
-# Activate virtual environment
-# Windows:
+
+# Activate the virtual environment
+# On Windows (CMD/PowerShell):
 .venv\Scripts\activate
-# macOS/Linux:
+# On macOS/Linux:
 source .venv/bin/activate
 
 # Install required Python packages
@@ -76,7 +87,7 @@ python app.py
 ```
 *The Flask server will start at `http://127.0.0.1:5000`.*
 
-### 2. Frontend Development Setup (Optional)
+### 3. Frontend Development Setup (Optional)
 If you wish to modify the React frontend:
 
 ```bash
@@ -117,3 +128,9 @@ This project is a practical showcase of the following database design competenci
 *   **Referential Integrity:** Active foreign keys, auto-increment primary keys, unique constraints, and cascading rules.
 *   **ACID Compliance:** Transaction blocks containing rollback error controls protecting complex inventory deductions and receipt mappings.
 *   **Data Aggregation & Reporting:** Analytical joining, grouping, filtering, and datetime formatting for retail reporting metrics.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
